@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
@@ -16,8 +16,19 @@
     <PackageProjectUrl>https://github.com/discosultan/VulkanCore</PackageProjectUrl>
     <PackageReleaseNotes>https://github.com/discosultan/VulkanCore/releases</PackageReleaseNotes>
     <RepositoryUrl>https://github.com/discosultan/VulkanCore</RepositoryUrl>
-    <TargetFramework>netstandard1.3</TargetFramework>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
     <Version>1.0.0-alpha40</Version>
+    <LangVersion>preview</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
   </PropertyGroup>
 
   <ItemGroup>
